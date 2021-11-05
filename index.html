@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Calculator</title>
+    <script>window.onload = function() {
+      var rmb="";
+      var bmr="";
+      var equa="";
+      var display = document.getElementById("display");
+      var button0 = document.getElementById("button-0")
+      var button1 = document.getElementById("button-1");
+      var button2 = document.getElementById("button-2");
+      var button3 = document.getElementById("button-3");
+      var button4 = document.getElementById("button-4");
+      var button5 = document.getElementById("button-5");
+      var button6 = document.getElementById("button-6");
+      var button7 = document.getElementById("button-7");
+      var button8 = document.getElementById("button-8");
+      var button9 = document.getElementById("button-9");
+      var buttonMulti= document.getElementById("button-multi");
+      var buttonMinus= document.getElementById("button-minus");
+      var buttonDivide = document.getElementById("button-divide");
+      var buttonEqual = document.getElementById("button-equal");
+      var buttonPoint = document.getElementById("button-point");
+      var buttonPlus = document.getElementById("button-plus");
+      button0.onclick = function() {
+          rmb = rmb + "0";
+          display.innerHTML = rmb;
+      }
+      button1.onclick = function() {
+          rmb = rmb + "1";
+          display.innerHTML = rmb;
+      }
+      button2.onclick = function() {
+          rmb = rmb + "2";
+          display.innerHTML = rmb;
+      }
+      button3.onclick = function() {
+          rmb = rmb + "3";
+          display.innerHTML = rmb;
+      }
+      button4.onclick = function() {
+          rmb = rmb + "4";
+          display.innerHTML = rmb;
+      }
+      button5.onclick = function() {
+          rmb = rmb + "5";
+          display.innerHTML = rmb;
+      }
+      button6.onclick = function() {
+          rmb = rmb + "6";
+          display.innerHTML = rmb;
+      }
+      button7.onclick = function() {
+          rmb = rmb + "7";
+          display.innerHTML = rmb;
+      }
+      button8.onclick = function() {
+          rmb = rmb + "8";
+          display.innerHTML = rmb;
+      }
+      button9.onclick = function() {
+          rmb = rmb + "9";
+          display.innerHTML = rmb;
+      }
+      buttonPoint.onclick = function(){
+          rmb = ""
+          display.innerHTML = rmb;
+      }
+      buttonPlus.onclick = async function(){
+          bmr = rmb;
+          rmb = "";
+          display.innerHTML = rmb ;    
+          buttonEqual.onclick = function(){
+              rmb = (rmb/1);
+              bmr = (bmr/1);
+              equa = (rmb + bmr);
+              display.innerHTML = equa;
+          }
+      }
+      buttonDivide.onclick = async function(){
+          bmr = rmb;
+          rmb = "";
+          display.innerHTML = rmb ;    
+          buttonEqual.onclick = function(){
+              rmb = (rmb/1);
+              bmr = (bmr/1);
+              equa = (bmr / rmb);
+              display.innerHTML = equa;
+          }
+      }
+      buttonMinus.onclick = async function(){
+          bmr = rmb;
+          rmb = "";
+          display.innerHTML = rmb ;    
+          buttonEqual.onclick = function(){
+              rmb = (rmb/1);
+              bmr = (bmr/1);
+              equa = (bmr - rmb);
+              display.innerHTML = equa;
+          }
+      }
+      buttonMulti.onclick = async function(){
+          bmr = rmb;
+          rmb = "";
+          display.innerHTML = rmb ;    
+          buttonEqual.onclick = function(){
+              rmb = (rmb/1);
+              bmr = (bmr/1);
+              equa = (rmb * bmr);
+              display.innerHTML = equa;
+          }
+      }
+      
+  
+  
+  };
+  </script>
+    <style>
+      body {
+    background: url("https://wallpapercave.com/wp/wp8281568.png");
+    text-align: center;
+  }
+main{
+    background: none;
+    backdrop-filter: blur(5px);
+    border: #ffffffb9 solid 1px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5%;
+    border-color: rgba(#00c3ff, rgb(0, 128, 111), rgb(0, 255, 157), 0, 5);
+    font-size: 100px;
+    color: white;
+    box-shadow: 0 4px 8px 0;
+}
+div{
+  border: #ffffffb9 solid 1px;
+  border-radius: 5%;
+  height: 250px;
+}
+button{
+  width:32px;
+    background: none;
+    backdrop-filter: blur(5px);
+    transition: all 0,5s;
+    border: #ffffffb9 solid 1px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius:5%;
+    border-color: rgba(#00c3ff, rgb(0, 128, 111), rgb(0, 255, 157), 0, 5);
+    font-size: 30px;
+    color: white;
+    box-shadow: 0 4px 8px 0;
+}
+button:hover{
+  background-color: black;
+}
+    </style>>
+  </head>
+  <body>
+  <main>
+      <div class="display">
+          <p id="display">
+              
+          </p>
+      </div>
+      <div>
+        <button id ="button-0">0</button>
+          <button id="button-1">1</button>
+          <button id="button-2">2</button>
+          <button id="button-3">3</button>
+          <button id="button-4">4</button>
+          <button id="button-5">5</button>
+          <button id="button-6">6</button>
+          <button id="button-7">7</button>
+          <button id="button-8">8</button>
+          <button id="button-9">9</button>
+          <button id="button-multi">X</button>
+          <button id="button-divide">/</button>
+          <button id="button-plus">+</button>
+          <button id="button-minus">-</button>
+          <button id="button-equal">=</button>
+          <button id="button-point">.</button>
+
+      </div>
+      
+  </main>
+</body>
